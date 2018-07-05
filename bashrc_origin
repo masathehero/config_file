@@ -1,0 +1,12 @@
+export PS1='\[\033[01;35m\]\u@westMac\[\033[01;37m\]\$ \[\033[00m\]'
+export LESS=-q
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export PGDATA=/usr/local/var/postgres
+
+
+alias ls='ls -G'
+alias jdata='cd /Users/Yoshida/Documents/research_data/power_demand_data/musako_input_data/journal/'
+alias jcode='cd /Users/Yoshida/Dropbox/research_code/power_demand/musako/code/number_code/journal_code/'
+alias start_psql='pg_ctl -l /usr/local/var/postgres/server.log start'
+alias stop_psql='pg_ctl -D /usr/local/var/postgres stop'
+alias sensi_remote='ssh sensinact@10.255.4.200'
