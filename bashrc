@@ -5,8 +5,10 @@ export PGDATA=/usr/local/var/postgres
 
 
 alias ls='ls -G'
-alias jdata='cd /Users/Yoshida/Documents/research_data/power_demand_data/musako_input_data/journal/'
-alias jcode='cd /Users/Yoshida/Dropbox/research_code/power_demand/musako/code/number_code/journal_code/'
 alias start_psql='pg_ctl -l /usr/local/var/postgres/server.log start'
 alias stop_psql='pg_ctl -D /usr/local/var/postgres stop'
-alias sensi_remote='ssh sensinact@10.255.4.200'
+
+export PYTHONPATH=/Users/Yoshida/github/org_module:$PYTHONPATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
