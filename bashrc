@@ -3,4 +3,3 @@ export LESS=-q
 export PGDATA=/usr/local/var/postgres
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ls='ls -G'
-
