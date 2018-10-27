@@ -1,0 +1,7 @@
+# エラーの時のビープ音をなくす
+set bell-style none
+# 補完の際大文字と小文字を区別しない
+set completion-ignore-case on
+
+# 設定変更後は、以下のコマンドで有効にする
+# bind -f .inputrc
