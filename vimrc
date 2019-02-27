@@ -212,3 +212,5 @@ function! Autopep8()
 endfunction
 
 autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
+"delete pop ups"
+autocmd FileType python setlocal completeopt-=preview
