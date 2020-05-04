@@ -64,8 +64,11 @@ set nu
 set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
+
+" 行番号の色(colorschemeの設定前に書くこと)
+autocmd ColorScheme * highlight LineNr ctermfg=245
+
 colorscheme molokai
-"colorscheme onedark
 syntax on
 set t_Co=256
 let g:molokai_original = 1
@@ -211,6 +214,25 @@ function! Autopep8()
     call Preserve(':silent %!autopep8 -')
 endfunction
 
-autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
+"自動でpep8に直す
+"autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
+autocmd FileType python nnoremap <F2> :call Autopep8()<CR>
+
 "delete pop ups"
 autocmd FileType python setlocal completeopt-=preview
+
+"ビープ音消す
+set belloff=all
+
+"vimの背景色
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
+
+"ctagを再帰的に検索させる
+set tags=tags;$HOME
+nnoremap <C-w>} <C-w>]
+nnoremap <C-w>] :vs <CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
